@@ -1,0 +1,725 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    
+    :root{
+        --container-width:1350px;
+        --container-padding:15px;
+
+    }
+
+    .header{
+            position: relative;
+            width: 100%;
+            max-height: 100;
+            margin-bottom: 0; /* Убедитесь, что нет наложения */
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html, body {
+        scroll-behavior: smooth;
+    }
+    
+    body{
+        background: linear-gradient(90deg, #2A2AC0, #6A0DAD, #FF00C7);
+        font-family: 'Poppins', sans-serif;
+        
+        color: #fff;
+    }
+    .container{
+        max-width: var(--container-width);
+        max-height: 27px;
+        margin: 0 auto;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+        list-style: none;
+        color: #fff;
+        
+    }
+
+    .nav-list ul{
+        display: flex;
+        align-content: center;
+        align-items: center;
+        column-gap: 35px;
+        list-style: none; /* Убирает маркеры списка */
+        font-size: 13px;
+        padding: 2px;
+    
+    }
+
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .nav-card ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        column-gap: 40px;
+        font-weight: 500;
+        font-size: 13px;
+        text-align: center;
+    }
+    
+    .nav-card li {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Отступ между иконкой и текстом */
+    }
+    
+    .nav-card a {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    .nav-card .icon {
+        width: 20px; /* Размер значка */
+        height: 20px;
+    }
+
+    /*Окно карты!!!*/
+    .cart{
+        display:none ;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 100px;
+        background-color: rgba(0, 0, 0, 0.5);
+        overflow: auto;
+    }
+
+    .login-content{
+        background-color: #fff;
+        margin: 0 auto;
+        padding: 20px;
+        width: 90%;
+        max-width: 400px;
+        border-radius: 8px;
+        font-family: Arial, sans-serif;
+        color: #333;
+    }
+/*Модельное Окно!!!
+    /* Общие стили модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+.login-content h2{
+     margin-top: 0;
+     font-size: 1.5rem;
+     color: #000;
+}
+.login-content p{
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.input-cart{
+    position: relative;
+    margin-bottom: 1rem;
+}
+.input-cart label{
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+.input-cart input{
+    width: calc(100% - 30px);
+    padding: 10px 30px 10px 10px;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* Заголовок и описание */
+.modal-content h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.modal-content p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* Поля ввода */
+.input-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+.input-group input {
+    width: calc(100% - 30px);
+    padding: 10px 30px 10px 10px;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-group .icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #999;
+}
+
+/* Чекбокс и забытый пароль */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+}
+
+.options a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+/* Кнопки */
+.login-btn, .register-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: #000;
+    color: #fff;
+}
+
+.register-btn {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.register-btn:hover {
+    background-color: #f9f9f9;
+}
+
+/* Дополнительные ссылки */
+.links {
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.links a {
+    display: block;
+    color: #007BFF;
+    text-decoration: none;
+    margin: 0.5rem 0;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Кнопка закрытия */
+.close-btn {
+    color: #aaa;
+    font-size: 1.5rem;
+    float: right;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
+   
+/*Следующая страница*/
+    .section {
+        margin: 0;
+        padding: 0;
+        max-height: 544px; /* Убедитесь, что высота страницы корректная */
+      }      
+
+    .container2{
+        display: flex;
+        max-width: 1400px;
+        max-height: 100vh;
+        
+        margin-top: 100px;
+        margin-left: 100px;
+    }
+
+    .container2 h1{
+        font-size: 50px;
+        font-weight: 800;
+    }
+
+    .container2 p{
+        font-size: 25px;
+        font-weight: 400;
+     margin-top: 20px;  
+    }
+
+    .content {
+        display: flex; 
+        
+        gap: 120px; 
+    }
+    
+    
+    
+    .image-content {
+        
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        
+    }
+    
+    .img1 {
+        max-width: 600px; 
+        margin-bottom: 500px;
+    }
+.btn{
+    column-gap: 50px;
+}
+
+    .btn-primary{
+        background-color: #FF00C7; 
+    color: #fff; 
+    border: none; 
+    border-radius: 15px; 
+    padding: 14px 25px; 
+    font-weight: 600; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    font-size: 13px;
+    margin-top: 35px;
+    }
+    .btn-primary:hover{
+        background-color: #5b36d4;
+        transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+    .btn-primary:active{
+        transform: scale(0.95); 
+    }
+
+    .btn-secondary {
+        background-color: transparent;
+        color: #fff; 
+        border: 2px solid #fff; 
+        border-radius: 15px; 
+        padding: 10px 30px; 
+        font-size: 16px; 
+        font-weight: 600; 
+        cursor: pointer; 
+        transition: all 0.3s ease; 
+    }
+    .btn-secondary:hover{
+        background-color:  #5b36d4;
+    }
+    .btn-secondary:active{
+        transform: scale(0.95);
+    }
+
+
+    #second-page {
+        background-color: #001f3f; 
+        color: white; 
+        min-height: 100vh; 
+        width: 100%; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        padding: 50px 15px; 
+    }
+    
+    .content-secondpage {
+        display: flex; 
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: space-between; 
+        max-width: 1200px;
+        width: 100%; 
+       
+    }
+    
+    .content-secondpage h1 {
+        font-size: 36px; 
+        margin-bottom: 15px;
+    }
+    
+    .content-secondpage p {
+        padding-top: 35px;
+        font-size: 18px;
+        line-height: 1.6; 
+        margin-bottom: 20px;
+       
+    }
+    .content-secondpage h4{
+        color: #8D5CF6;
+        padding-top: 35px;
+    }
+    
+    .image-content-second img {
+        max-width: 100%; 
+        height: auto; 
+    }
+    .fire-page{
+        background-color: #001f3f;
+        max-height: 335px;
+    }
+    .content-fire-page{
+       
+        max-width: 1300px;
+        margin: 0 auto;
+    
+    }
+    .text-fire img {
+        padding: 30px;
+    }
+    
+    
+    .three-page {
+        background-color: #001f3f; 
+        color: white; 
+        min-height: 100vh; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        padding: 50px 15px;
+    }
+    
+    .content-threepage {
+        max-width: 1200px;
+      
+        
+        padding: 50px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .text-three {
+        display: flex;
+      
+        gap: 400px; /* Расстояние между изображением и текстом */
+        align-items: center;
+    }
+    
+    .image-content-three {
+        flex: 1; 
+        max-width: 300px; 
+    }
+    
+    .image-content-three img {
+        width: 400px;
+        height: auto; 
+        border-radius: 10px;
+    }
+    
+    
+    .text-content-three h1 {
+        font-weight: 800;
+        font-size: 45px;
+    }
+    .text-content-three p {
+        padding-top: 35px;
+    }
+
+    .text-content-three h4 {
+        color: #fff;
+        padding-top: 35px;
+        color: #8D5CF6;
+    }
+
+  .five-page{
+    max-width: 100%;
+    background-color: #001f3f;
+    max-height: 100vh;
+  }
+
+  .content-five{
+    max-width: 1050px;
+    max-height: 930px;
+   
+    margin: 0 auto;
+  }
+
+  .text-five
+  {
+    max-width: 1044px;
+    max-height: 135px;
+  }
+
+  .text-five h4{
+    color: #8D5CF6;
+  }
+
+  .text-five h1{
+    font-weight: 700;
+    font-size: 35px;
+    padding-top: 5px;
+  }
+
+  .text-five p{
+    font-weight: 300;
+    padding-top: 5px;
+  }
+
+  .card-five {
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+    margin-top: 60px;
+   
+}
+
+.card {
+    background-color: #fff;
+    color: #001f3f;
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 890px;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.card-img {
+    width: 120px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+
+.card-text {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.card-rating {
+    font-size: 16px;
+    color: #FFBF00;
+    margin-bottom: 15px;
+}
+
+.card-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.card-role {
+    font-size: 14px;
+    color: #666;
+}
+
+.gmail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #001f3f; 
+    padding: 50px 15px;
+    min-height: 100vh; 
+  }
+  
+  .content-gmail {
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .gmail-text h4 {
+    color: #8D5CF6;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .gmail-text h1 {
+    font-weight: 800;
+    font-size: 45px;
+    margin-bottom: 20px;
+    
+  }
+  
+  .gmail-text p {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+ 
+  
+  .gmail-btn input[type="email"] {
+    width: 450px;
+    height: 45px;
+    padding: 0 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .gmail-btn input[type="email"]::placeholder {
+    color: #aaa;
+  }
+  
+  .gmail-btn button {
+    height: 45px;
+    padding: 0 20px;
+    background-color: #7a4ff8;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+  }
+  
+  
+  .gmail-btn button:hover {
+    background-color: #5b36d4;
+  }
+  
+  
+  .gmail-btn button:active {
+    background-color: #4c2fb2; /* Темнее, чем hover */
+    transform: scale(0.95); /* Легкое уменьшение */
+  }
+  
+  .info{
+    max-width: 100%;
+    max-height: 273px;
+   background-color: #001f3f;
+  }
+  .contet-info{
+    max-width: 1050px;
+    
+    max-height: 270px;
+    
+  }
+  .text-info{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+  }
+
+  .text-info h4{
+    font-size: 15px;
+    padding-top: 5px;
+  }
+  .telefon{
+    padding-top: 5px;
+    gap: 5px;
+    display: flex;
+  }
+.google-maps{
+    padding-top: 10px;
+    display: flex;
+    gap: 5px;
+}
+.google-maps h4{
+    font-size: 12px;
+}
+.google-maps a{
+    display: flex;
+}
+.gmail-info{
+    font-size:10px;
+    display: flex;
+    padding-top: 5px;
+    gap: 5px;   
+}
+.gmail-info a{
+    display: flex;
+}
+.GetInTouch-info h4{
+    font-size: 12px;
+}
+
+.last-section{
+    max-width: 100%;
+    max-height: 75px;
+    background-color:#FAFAFA
+}
+.content-last{
+    max-width: 1187px;
+    max-height: 74px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+.last-icons{
+    display: flex;
+    gap: 22px;
+    align-items: center;
+}
+.last-text h4{
+    color: #000;
+    font-weight: 400;
+}
+.twitter a:active{
+    transform: scale(0.98);
+}
+
+.modal {
+    display: none; /* Скрыть модальное окно по умолчанию */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
