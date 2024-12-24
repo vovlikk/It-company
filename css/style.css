@@ -6,6 +6,7 @@
 
     }
 
+    /*Содержимое шапки*/
     .header{
             position: relative;
             width: 100%;
@@ -83,8 +84,45 @@
         height: 20px;
     }
 
+/* Общие стили  для Courses Чтобы при наведении выплывала*/
+.nav-list ul li {
+    position: relative;
+}
+
+/* Стили для выпадающей панели */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    z-index: 10;
+    min-width: 150px;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+
+
+/* Отображение панели при наведении */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/*Закончили Сourses при наведении*/
+/*Закончили шапку*/
+
+
     /*Окно карты!!!*/
-    .cart{
+    .basket{
         display:none ;
         position: fixed;
         z-index: 1000;
@@ -97,16 +135,61 @@
         overflow: auto;
     }
 
-    .login-content{
+    .basket-content{
         background-color: #fff;
         margin: 0 auto;
         padding: 20px;
-        width: 90%;
+        
         max-width: 400px;
+        
         border-radius: 8px;
         font-family: Arial, sans-serif;
         color: #333;
     }
+    .basket-content p{
+        padding-top: 20px;
+    }
+    .input-basket{
+      
+        position: relative;
+        margin-bottom: 1rem;
+    }
+    .input-basket label{
+        font-size: 0.85rem;
+        margin-bottom: 0.3rem;
+        display: block;
+    }
+    .input-basket {
+        margin-top: 300px;
+      
+        
+        font-size: 4px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+   
+    .basket-btn{
+       
+      
+        display: block;
+         width: 100%;
+        padding: 10px;
+        
+        margin-bottom: 1rem;
+        
+        border-radius: 20px;
+        cursor: pointer;
+    }
+   
+    .close-btn2 {
+        color: #aaa;
+        font-size: 1.5rem;
+        float: right;
+        cursor: pointer;
+    }
+    /*Закончили окно карты*/
+    
+    
 /*Модельное Окно!!!
     /* Общие стили модального окна */
 .modal {
@@ -142,22 +225,14 @@
     line-height: 1.5;
 }
 
-.input-cart{
-    position: relative;
-    margin-bottom: 1rem;
-}
+
+
 .input-cart label{
     font-size: 0.85rem;
     margin-bottom: 0.3rem;
     display: block;
 }
-.input-cart input{
-    width: calc(100% - 30px);
-    padding: 10px 30px 10px 10px;
-    font-size: 0.9rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+
 /* Заголовок и описание */
 .modal-content h2 {
     margin-top: 0;
@@ -263,7 +338,7 @@
 }
 
 /* Кнопка закрытия */
-.close-btn {
+.close-btn1 {
     color: #aaa;
     font-size: 1.5rem;
     float: right;
@@ -370,7 +445,7 @@
         transform: scale(0.95);
     }
 
-
+    /*Стили для страницы после приветственной*/
     #second-page {
         background-color: #001f3f; 
         color: white; 
@@ -413,6 +488,9 @@
         max-width: 100%; 
         height: auto; 
     }
+    /*Закончили  со страницей после приветственной */
+
+    /*Содержимое с партнерами*/
     .fire-page{
         background-color: #001f3f;
         max-height: 335px;
@@ -426,8 +504,9 @@
     .text-fire img {
         padding: 30px;
     }
+    /*Закончили страницу с партнерами*/
     
-    
+    /*Солержимое страницы после партнеров*/
     .three-page {
         background-color: #001f3f; 
         color: white; 
@@ -479,7 +558,9 @@
         padding-top: 35px;
         color: #8D5CF6;
     }
+    /*Закончили содержимое со страницей после партнеров*/
 
+    /*Содержимое с отзывами*/
   .five-page{
     max-width: 100%;
     background-color: #001f3f;
@@ -521,6 +602,7 @@
     margin-top: 60px;
    
 }
+/*Закончили с Отзывами*/
 
 .card {
     background-color: #fff;
@@ -563,6 +645,7 @@
     color: #666;
 }
 
+/*Содержимое поисков курсов gmail*/
 .gmail {
     display: flex;
     justify-content: center;
@@ -634,7 +717,9 @@
     background-color: #4c2fb2; /* Темнее, чем hover */
     transform: scale(0.95); /* Легкое уменьшение */
   }
-  
+  /*Закончили с Поисками курсов*/
+
+  /*Начинаем с инфы про компанию info*/
   .info{
     max-width: 100%;
     max-height: 273px;
@@ -684,7 +769,9 @@
 .GetInTouch-info h4{
     font-size: 12px;
 }
+/*Закончили про компанию*/
 
+/*Начали страницу с ссылками последняя страницы last*/
 .last-section{
     max-width: 100%;
     max-height: 75px;
@@ -710,16 +797,5 @@
 .twitter a:active{
     transform: scale(0.98);
 }
-
-.modal {
-    display: none; /* Скрыть модальное окно по умолчанию */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-}
+/*Закончили с сылками*/
 

@@ -1,7 +1,7 @@
 // Получаем элементы
 const accountBtn = document.getElementById('accountBtn');
 const loginModal = document.getElementById('loginModal');
-const logincart = document.getElementById('logincart');
+const logincart = document.getElementById('loginBasket');
 const closeBtn1 = document.querySelector('.close-btn1');
 const closeBtn2 = document.querySelector('.close-btn2');
 const cartBtn = document.getElementById("cartBtn");
@@ -37,20 +37,20 @@ window.addEventListener('click', (event) => {
 
 // Открыть окно с корзиной
 cartBtn.addEventListener('click', () => {
-    logincart.style.display = 'block';
+    loginBasket.style.display = 'block';
     toggleBodyScroll(true);  // Блокируем прокрутку
 });
 
 // Закрыть окно с корзиной при клике на кнопку закрытия
 closeBtn2.addEventListener('click', () => {
-    logincart.style.display = 'none';
+    loginBasket.style.display = 'none';
     toggleBodyScroll(false);  // Включаем прокрутку
 });
 
 // Закрыть окно с корзиной при клике вне его
 window.addEventListener('click', (event) => {
     if (event.target === logincart) {
-        logincart.style.display = 'none';
+        loginBasket.style.display = 'none';
         toggleBodyScroll(false);  // Включаем прокрутку
     }
 });

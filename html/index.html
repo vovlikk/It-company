@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/html/Htmlcourse.html">
 
 </head>
 
 <body>
+    <!--Содержимое Шапки-->
     <header class="header">
         <div class="container">
             <nav class="nav">
@@ -18,7 +20,17 @@
                 </div>
                 <div class="nav-list">
                     <ul>
-                        <li><a href="">Home</a></li>
+                        <!--Чтобы выезжала панелька-->
+                        <li class="dropdown">
+                            <a href="">Courses</a>
+                            <div class="dropdown-content">
+                                <a href="/html/Htmlcourse.html">HTML</a>
+                                <a href="/html/Csscourse.html">CSS</a>
+                                <a href="#course3">JS</a>
+                                <a href="#course4">View All Cours</a>
+                            </div>
+                        </li>
+                        <!--Конец панельки-->
                         <li><a href="#Testimonails">Testimonials</a></li>
                         <li><a href="#news">About New</a></li>
                         <li><a href="#contact">Contact Us</a></li>
@@ -33,39 +45,38 @@
                         </li>
                         <li>
                             <img class="icon" src="/image/cart-shopping.png" alt="">
-                            <a href="#!" id="cartBtn">Cart</a>
+                            <a href="#!" id="cartBtn">Basket</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
+    <!--Закончили содержимое шапки-->
 
-    <div id="logincart" class="cart">
-        <div class="login-content">
+    <!--Поле корзины-->
+    <div id="loginBasket" class="basket">
+        <div class="basket-content">
             <span class="close-btn2">&times;</span>
             <h2>Min Kurw</h2>
             <p>Du mangler kun at købe for 499 for at opnå gratis levering -<br> Hurtig levering: 1-2 hverdage.</p>
+            <div class="content-basket">
+                <h2>Ваша </h2>
+            </div>
 
             <form>
-                <div class="input-cart">
-                    <label for="cart">Cart</label>
-                    <input type="cart" id="cart" name="cart" placeholder="Indtast din e-mail" required>
-                </div>
-
-                <div class="input-cart">
-                    <label for="period">Validity period</label>
-                    <input type="period" id="period" name="period" placeholder="Validity period" required>
-                </div>
-
-                <div class="input-cart">
-                    <label for="cvv">Cvv</label>
-                    <input type="cvv" id="cvv" name="cvv" placeholder="Cvv" required>
+                <div class="input-basket">
+                    
+                    <button class="basket-btn">
+                    <h3>Продолжить</h3>
+                    </button>
                 </div>
             </form>
         </div>
     </div>
+    <!--Закончили поле с корзиной-->
 
+    <!-- Поле Авторизации-->
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close-btn1">&times;</span>
@@ -108,8 +119,9 @@
             </div>
         </div>
     </div>
+<!--Закончили авторизацию-->
 
-
+<!--Основная страница-->
     <section class="section">
         <div class="container2">
             <div class="content">
@@ -129,7 +141,7 @@
             </div>
         </div>
     </section>
-
+<!--Закончили основную страницу-->
 
 
 
@@ -150,6 +162,7 @@
         </div>
     </section>
 
+    <!--Страница с Партнерами-->
     <section class="fire-page">
         <div class="content-fire-page">
             <div class="text-fire">
@@ -163,9 +176,9 @@
             </div>
         </div>
     </section>
+    <!--Закончили с партнерами-->
 
-
-
+    <!--Страница после партнером о курсах-->
     <section class="three-page">
         <div class="content-threepage">
             <div class="text-three">
@@ -186,10 +199,11 @@
             </div>
         </div>
     </section>
+    <!--Закончили со страницей о курсах после спонсорова-->
 
 
 
-
+    <!--Страница с отзывами-->
     <section class="five-page" id="Testimonails">
         <div class="content-five">
             <div class="text-five">
@@ -226,7 +240,9 @@
             </div>
         </div>
     </section>
+    <!--Закончили страницу с отзывами-->
 
+    <!--Страница С поиском курсов-->
     <section class="gmail" id="news">
         <div class="content-gmail">
             <div class="gmail-text">
@@ -243,7 +259,9 @@
             </div>
         </div>
     </section>
+    <!--Закончили с поиском курсов-->
 
+    <!--Страница с информацией о компании-->
     <section class="info" id="contact">
         <div class="content-info">
             <div class="text-info">
@@ -303,7 +321,9 @@
             </div>
         </div>
     </section>
+    <!--Закончили с инфой о компании-->
 
+    <!--самая последняя страница с ссылками-->
     <section class="last-section">
         <div class="content-last">
             <div class="last-text">
@@ -329,6 +349,7 @@
             </div>
         </div>
     </section>
+    <!--Закончили с последней страней с ссылками-->
 
     <script src="/js/file.js"></script>
 
