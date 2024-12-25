@@ -54,3 +54,5 @@ window.addEventListener('click', (event) => {
         toggleBodyScroll(false);  // Включаем прокрутку
     }
 });
+
+

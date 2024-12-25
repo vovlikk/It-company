@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/CreateProfile/createProfile.css">
+    <title>NewProfile</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container-header">
+            <nav class="nav">
+                <div class="nav-logo">
+                    <img src="/htmlcourserimg/Group.png" alt="">
+                </div>
+                <div class="nav-text">
+                    <ul>
+                        <li>
+                            <a  href="/html/index.html">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="">Courses</a>
+                            <div class="dropdown-content">
+                                <a href="/html/Htmlcourse.html">HTML</a>
+                                <a href="/html/Csscourse.html">CSS</a>
+                                <a href="/html/JScourse.html">JS</a>
+                                <a href="/html/allcourses.html">View All Cours</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="register">
+        <div class="container-register">
+
+            <div class="text-register">
+                <div class="register-head-line">
+                    <h1>CREATE ACCOUNT</h1>
+                </div>
+                <div class="register-body">
+                    <p>Enter your personal information to create a user account. If you have already created an account, you can log in to change your information.</p>
+                </div>
+            </div>
+
+            <form class="register-form">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="First Name*" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" name="last-name" id="last-name" placeholder="Last Name*" required>
+                </div>
+                <div class="form-group">
+                    <label for="e-mail">E-Mail</label>
+                    <input type="text" id="e-mail", name="last-name", placeholder="E-Mail*" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="text" id="password", name="password" placeholder="Password*" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm</label>
+                    <input type="text" id="confirm-password", name="confirm-password" placeholder="Confirm" required>
+                </div>
+                <div class="form-submit">
+                    <button type="submit">CREATE</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+</body>
+</html>
