@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+    
+    
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(90deg, #2A2AC0, #6A0DAD, #FF00C7);
+        color: #000;
+}
+
+.header{
+    padding-top: 10px;
+    position: relative;
+    width: 100%;
+    max-height: 100;
+    margin-bottom: 0; /* Убедитесь, что нет наложения */
+}
+.container-header{
+    
+    max-width: 1100px;
+    max-height: 27px;
+    margin: 0 auto;
+  
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-text ul{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    ;
+}
+
+.nav-text a{
+    text-decoration: none;
+    color: #000;
+   
+    
+}
+
+
+.text-html p{
+    font-size: 20px;
+}
+.nav-text li{
+    text-align: center;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    z-index: 10;
+    min-width: 150px;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+   
+
+/* Контейнер для всех курсов */
+.all-courses {
+    margin-top: 30px;
+    display: flex; /* Flexbox для горизонтального расположения */
+    justify-content: space-between; /* Равномерное распределение блоков */
+    padding: 20px;
+    
+    background-color: #f9f9f9;
+}
+
+/* Контейнер для всех блоков курсов */
+.container-courses {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет блокам переноситься на следующую строку */
+    justify-content: space-between;
+    
+    width: 100%; /* Максимальная ширина контейнера */
+}
+
+.course-block {
+    flex: 1 1 calc(24% - 20px); 
+    max-width: calc(35% - 20px); 
+
+}
+
+.course-block:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ссылка на курс */
+.course-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/*all Description*/
+.text-html .description{
+    font-size: 15px;
+}
+
+.text-css .description{
+    font-size: 15px;
+}
+.text-js .description{
+    font-size: 15px;
+}
+
+.text-php .description{
+    font-size: 15px;
+}
+.text-elexir .description{
+    font-size: 15px;
+}
+
+
+/* Изображение внутри блока */
+.course-link img {
+    
+    max-height: 130px; /* Ограничение высоты изображения */
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Текст внутри блока */
+.text-html, .text-css, .text-js {
+    padding: 10px;
+    font-size: 1px;
+}
+
+/* Заголовки и описание */
+.tagline {
+    font-size: 15px;
+    color: #777;
+}
+
+.title {
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+.description {
+    font-size: 10px;
+    color: #555;
+}
